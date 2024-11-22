@@ -1,2 +1,2 @@
 # CS410-Healthcare-Assistant-Chatbot
-AI Healthcare Information Assistant Chatbot Project
+AI Healthcare Information Assistant Chatbot Project(s)
