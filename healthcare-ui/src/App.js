@@ -7,22 +7,37 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Appointments from './pages/Appointments';
-import Chatbot from './components/Chatbot'; 
+import Chatbot from './components/Chatbot';
+import { Box } from '@mui/material';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/appointments" element={<Appointments />} />
-      </Routes>
-      <Chatbot /> {/* Include the Chatbot component here */}
-      <Footer />
-    </Router>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        minHeight: '100vh',
+      }}
+    >
+      <Router>
+        <Navbar />
+        <Box
+          sx={{
+            flexGrow: 1,
+          }}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/appointments" element={<Appointments />} />
+          </Routes>
+        </Box>
+        <Footer />
+        <Chatbot />
+      </Router>
+    </Box>
   );
 }
 
